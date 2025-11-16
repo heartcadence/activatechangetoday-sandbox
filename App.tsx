@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header.tsx';
-import Footer from './components/Footer.tsx';
-import HomePage from './pages/HomePage.tsx';
-import AboutPage from './pages/AboutPage.tsx';
-import ServicesPage from './pages/ServicesPage.tsx';
-import FAQPage from './pages/FAQPage.tsx';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import FAQPage from './pages/FAQPage';
 
 const App: React.FC = () => {
   const location = useLocation();

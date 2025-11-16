@@ -29,6 +29,32 @@
         },
       };
     </script>
+    <style>
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-scroll {
+        animation: scroll 40s linear infinite;
+      }
+      .scroller-fade::before,
+      .scroller-fade::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10rem;
+        z-index: 2;
+      }
+      .scroller-fade::before {
+        left: 0;
+        background: linear-gradient(to right, #E0F2FE, transparent);
+      }
+      .scroller-fade::after {
+        right: 0;
+        background: linear-gradient(to left, #E0F2FE, transparent);
+      }
+    </style>
     <!-- Add Babel Standalone for in-browser transpilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">

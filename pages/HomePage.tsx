@@ -1,13 +1,38 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TESTIMONIALS, SERVICES } from '../constants.tsx';
-import type { Testimonial } from '../types.ts';
+import { TESTIMONIALS, SERVICES } from '../constants';
+import type { Testimonial } from '../types';
+
+const heroImages = [
+    "https://picsum.photos/id/43/800/600",
+    "https://picsum.photos/id/65/800/600",
+    "https://picsum.photos/id/177/800/600",
+    "https://picsum.photos/id/200/800/600",
+    "https://picsum.photos/id/326/800/600",
+    "https://picsum.photos/id/367/800/600",
+    "https://picsum.photos/id/433/800/600"
+];
+
+const HeroImages: React.FC = () => (
+    <div className="relative w-full max-w-2xl mx-auto lg:max-w-none lg:mx-0 overflow-hidden rounded-lg shadow-2xl scroller-fade">
+        <div className="flex w-max animate-scroll hover:[animation-play-state:paused]">
+            {[...heroImages, ...heroImages].map((src, index) => (
+                <img 
+                    key={index}
+                    src={src} 
+                    alt={`Empowered woman ${index + 1}`}
+                    className="w-80 h-96 object-cover rounded-md shadow-lg mr-6"
+                />
+            ))}
+        </div>
+    </div>
+);
 
 const HeroSection: React.FC = () => (
-    <div className="bg-primary-light">
+    <div className="bg-primary-light overflow-hidden">
         <div className="container mx-auto px-4 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left z-10">
                 <h1 className="text-4xl lg:text-6xl font-serif font-bold text-primary-dark leading-tight">
                     Unlock the Confident, Powerful You.
                 </h1>
@@ -18,8 +43,8 @@ const HeroSection: React.FC = () => (
                     Book a Free 30-Min Session
                 </a>
             </div>
-            <div>
-                <img src="https://picsum.photos/id/367/800/600" alt="Confident woman smiling" className="rounded-lg shadow-2xl object-cover w-full h-full" />
+            <div className="relative">
+                <HeroImages />
             </div>
         </div>
     </div>
