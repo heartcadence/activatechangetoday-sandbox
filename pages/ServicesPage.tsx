@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { SERVICES } from '../constants';
-import type { Service } from '../types';
+import { SERVICES } from '../constants.tsx';
+import type { Service } from '../types.ts';
 
 const CheckIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

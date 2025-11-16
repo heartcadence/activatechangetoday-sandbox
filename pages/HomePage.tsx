@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TESTIMONIALS, SERVICES } from '../constants';
-import type { Testimonial } from '../types';
+import { TESTIMONIALS, SERVICES } from '../constants.tsx';
+import type { Testimonial } from '../types.ts';
 
 const HeroSection: React.FC = () => (
     <div className="bg-primary-light">
